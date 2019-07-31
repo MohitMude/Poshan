@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "68700039597",
+    "firebase_url": "https://poshan-app.firebaseio.com",
+    "project_id": "poshan-app",
+    "storage_bucket": "poshan-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68700039597:android:a53d202ea22d0801",
+        "android_client_info": {
+          "package_name": "com.iitism.poshan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68700039597-1lc9i1vjv8m61e5fsa68bgsm1h7e7egl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0b8r7v1vKIhurbJxwCX0SlYCqOTkxxtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68700039597-1lc9i1vjv8m61e5fsa68bgsm1h7e7egl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

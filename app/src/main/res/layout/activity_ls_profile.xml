@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LS.LSProfileActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Name :" />
+
+            <TextView
+                android:id="@+id/email_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_field"
+                android:padding="8dp"
+                android:text="Email :" />
+
+
+            <TextView
+                android:id="@+id/phone_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_field"
+                android:padding="8dp"
+                android:text="Phone No." />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/card_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@color/colorAccent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/center_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Centre :"
+                android:padding="8dp"/>
+
+
+            <TextView
+                android:id="@+id/undertreatment_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Under Treatment :"
+                android:layout_below="@id/center_field"
+                android:padding="8dp"/>
+
+
+            <TextView
+                android:id="@+id/waiting_list_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waiting List :"
+                android:layout_below="@id/undertreatment_field"
+                android:padding="8dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

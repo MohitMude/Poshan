@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_txt_child_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/child_name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edt_txt_father_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/father_s_name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/edt_txt_mother_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mother_s_name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/edt_txt_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/age_in_months"
+        android:inputType="numberDecimal"/>
+
+<android.support.v7.widget.AppCompatSpinner
+    android:id="@+id/gender_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin">
+
+</android.support.v7.widget.AppCompatSpinner>
+
+    <EditText
+        android:id="@+id/edt_txt_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:inputType="numberDecimal"/>
+
+
+
+    <EditText
+        android:id="@+id/edt_txt_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/weight_in_kg"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edt_txt_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/height_in_cm"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edt_txt_district"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/district"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edt_txt_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/block"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edt_txt_gram_panchayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/gram_panchayat"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edt_txt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"/>
+
+
+
+    <EditText
+        android:id="@+id/edt_txt_how_many_times_visited_parents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/how_many_times_visited_their_parents"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/edt_txt_enter_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_summary"
+        android:inputType="textLongMessage"/>
+
+        <Button
+            android:id="@+id/btn_add_child_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:padding="8dp"
+            android:layout_gravity="end"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
