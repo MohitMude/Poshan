@@ -11,48 +11,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <EditText
-            android:id="@+id/edt_txt_edit_child_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/child_name"
-            android:inputType="text"/>
+        android:id="@+id/edt_txt_edit_adhar_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_aadhar_no"
+        android:inputType="text"/>
 
-        <EditText
-            android:id="@+id/edt_txt_edit_father_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/father_s_name"
-            android:inputType="textPersonName"/>
 
-        <EditText
-            android:id="@+id/edt_txt_edit_mother_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/mother_s_name"
-            android:inputType="textPersonName"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_child_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/child_name"-->
+            <!--android:inputType="text"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/age_in_months"
-            android:inputType="numberDecimal"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_father_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/father_s_name"-->
+            <!--android:inputType="textPersonName"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phone_number"
-            android:inputType="numberDecimal"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_mother_name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/mother_s_name"-->
+            <!--android:inputType="textPersonName"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_age"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/age_in_months"-->
+            <!--android:inputType="numberDecimal"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_phone_number"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/phone_number"-->
+            <!--android:inputType="numberDecimal"/>-->
 
         <EditText
             android:id="@+id/edt_txt_edit_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/weight_in_kg"
-            android:inputType="number"/>
+            android:inputType="numberDecimal"/>
 
         <EditText
             android:id="@+id/edt_txt_edit_height"
@@ -61,40 +68,40 @@
             android:hint="@string/height_in_cm"
             android:inputType="number"/>
 
-        <EditText
-            android:id="@+id/edt_txt_edit_district"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/district"
-            android:inputType="text"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_district"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/district"-->
+            <!--android:inputType="text"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_block"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/block"
-            android:inputType="text"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_block"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/block"-->
+            <!--android:inputType="text"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_gram_panchayat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/gram_panchayat"
-            android:inputType="text"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_gram_panchayat"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/gram_panchayat"-->
+            <!--android:inputType="text"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/address"
-            android:inputType="textPostalAddress"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_address"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/address"-->
+            <!--android:inputType="textPostalAddress"/>-->
 
-        <EditText
-            android:id="@+id/edt_txt_edit_how_many_times_visited_parents"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/how_many_times_visited_their_parents"
-            android:inputType="numberDecimal"/>
+        <!--<EditText-->
+            <!--android:id="@+id/edt_txt_edit_how_many_times_visited_parents"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/how_many_times_visited_their_parents"-->
+            <!--android:inputType="numberDecimal"/>-->
 
         <EditText
             android:id="@+id/edt_txt_edit_enter_summary"
@@ -109,7 +116,8 @@
             android:layout_height="wrap_content"
             android:text="UPDATE"
             android:padding="8dp"
-            android:layout_gravity="end"/>
+            android:layout_gravity="end"
+            android:background="@drawable/ic_rounded_background"/>
 
 
     </LinearLayout>

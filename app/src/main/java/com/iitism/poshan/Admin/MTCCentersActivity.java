@@ -49,28 +49,25 @@ public class MTCCentersActivity extends AppCompatActivity {
     public void loadRecyclerViewData()
     {
         centerlist= new ArrayList<>();
-        MTCCentersModel mtcCentersModel = new MTCCentersModel("CHAS","Albel KHERKATTA","Chas","chasmtc@gmail.com","123456","9131981111",20);
-        centerlist.add(mtcCentersModel);
-        adapter=new MTCCentersAdapter(this,centerlist);
-        recyclerView.setAdapter(adapter);
 
-       /* databaseReference1.addValueEventListener(new ValueEventListener() {
+
+        databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds:dataSnapshot.getChildren())
                 {
-                    //for(DataSnapshot ds1:ds.getChildren()) {
-                        String centername=ds.child("Address").getValue(String.class);
-                        String incharge=ds.child("Incharge").getValue(String.class);
-                        String address=ds.child("Address").getValue(String.class);
-                        int  mobile=Integer.parseInt(ds.child("Mobile").getValue(String.class));
-                        int beds=Integer.parseInt(ds.child("Total Beds").getValue(String.class));
-                        String email=ds.child("Email").getValue(String.class);
-                        String password=ds.child("Password").getValue(String.class);
-                      // MTCCentersModel mtcCentersModel = new MTCCentersModel(centername,incharge,address,email,password,mobile,beds);
-                    MTCCentersModel mtcCentersModel = new MTCCentersModel("CHAS","Albel KHERKATTA","Chas","chasmtc@gmail.com","123456",913198,20);
-                    centerlist.add(mtcCentersModel);
-                    //}
+
+                        String centername = ds.getKey();
+                        String incharge = ds.child("Incharge").getValue(String.class);
+                        String address = ds.child("Address").getValue(String.class);
+                        String mobile = ds.child("Mobile").getValue(String.class);
+                     //   int beds = Integer.parseInt(ds1.child("Total Bed").getValue().toString());
+                        String email = ds.child("Oemail").getValue(String.class);
+                        String password = ds.child("Password").getValue(String.class);
+                        MTCCentersModel mtcCentersModel=new MTCCentersModel(centername,incharge,address,email,password,mobile);
+                        centerlist.add(mtcCentersModel);
+
+
                 }
                 adapter=new MTCCentersAdapter(getApplicationContext(),centerlist);
                 recyclerView.setAdapter(adapter);
@@ -80,6 +77,6 @@ public class MTCCentersActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });*/
+        });
     }
 }

@@ -33,12 +33,47 @@
         android:hint="@string/mother_s_name"
         android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/edt_txt_age"
-        android:layout_width="match_parent"
+    <!--<EditText-->
+        <!--android:id="@+id/edt_txt_age"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/age_in_months"-->
+        <!--android:inputType="numberDecimal"/>-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+   <TextView
+       android:id="@+id/textmessage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Select Date Of Birth"
+       android:textSize="18sp"
+       android:layout_margin="@dimen/activity_horizontal_margin"
+       android:layout_alignParentLeft="true"
+       />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/btn_calendar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/age_in_months"
-        android:inputType="numberDecimal"/>
+        android:layout_gravity="end"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/textmessage"
+        android:padding="@dimen/fab_margin"
+        android:src="@drawable/ic_calendar"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+        <!--<CalendarView-->
+            <!--android:id="@+id/calendarView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:dateTextAppearance="@style/CalendarViewDateCustomText"-->
+            <!--android:unfocusedMonthDateColor="@color/colorPrimary"-->
+            <!--android:focusedMonthDateColor="@color/design_default_color_primary_dark"-->
+            <!--android:weekDayTextAppearance="@style/CalendarViewWeekCustomText"></CalendarView>-->
 
 <android.support.v7.widget.AppCompatSpinner
     android:id="@+id/gender_spinner"
@@ -57,6 +92,11 @@
         android:hint="@string/phone_number"
         android:inputType="numberDecimal"/>
 
+        <Switch
+            android:id="@+id/bpl_switch"
+            android:text="BPL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
     <EditText
@@ -64,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/weight_in_kg"
-        android:inputType="number"/>
+        android:inputType="numberDecimal"/>
 
     <EditText
         android:id="@+id/edt_txt_height"
@@ -103,19 +143,13 @@
 
 
 
-    <EditText
-        android:id="@+id/edt_txt_how_many_times_visited_parents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/how_many_times_visited_their_parents"
-        android:inputType="numberDecimal"/>
 
     <EditText
-        android:id="@+id/edt_txt_enter_summary"
+        android:id="@+id/edt_txt_enter_Aadhar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_summary"
-        android:inputType="textLongMessage"/>
+        android:hint="@string/enter_adhaar_no"
+        android:inputType="numberDecimal"/>
 
         <Button
             android:id="@+id/btn_add_child_detail"
@@ -123,7 +157,8 @@
             android:layout_height="wrap_content"
             android:text="ADD"
             android:padding="8dp"
-            android:layout_gravity="end"/>
+            android:layout_gravity="end"
+            android:background="@drawable/ic_rounded_background"/>
 
 
     </LinearLayout>

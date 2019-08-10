@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -18,15 +20,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Admin.AddLSActivity"
+            android:label="Add LS"></activity>
+        <activity
+            android:name=".LoginCheckerActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MTC.MTCProfileActivity" />
+        <activity android:name=".Admin.AdminProfileActivity" />
+        <activity android:name=".LS.LSWaitingList" />
+        <activity android:name=".Admin.GraphActivity" />
+        <activity android:name=".Admin.AddMTCCenter"
+            android:label="ADD MTC Center"/>
+        <activity android:name=".MTC.MTCUpdateDailyDetails"
+            android:label="Enter Daily Updates"/>
         <activity
             android:name=".MTC.MTCMainActivity"
             android:label="@string/title_activity_mtcmain"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Admin.MTCCentersActivity" />
-        <activity android:name=".Admin.AdminLSDetailActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MTC.SAMDialog" />
+        <activity android:name=".Admin.MTCCentersActivity"
+            android:label="MTC Centers"/>
+        <activity android:name=".Admin.AdminLSDetailActivity" />
         <activity
             android:name=".Admin.AdminMTCCenterAnalysis"
-            android:label="MTC Center Analysis" />
+            android:label="MTC Center Analysis"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Admin.AdminMainActivity"
             android:label="@string/title_activity_admin_main"
@@ -43,13 +67,7 @@
             android:name=".LS.LSMainActivity"
             android:label="@string/title_activity_lsmain"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LS.LSLoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LS.LSLoginActivity"></activity>
         <activity android:name=".MTC.MTCLoginActivity" />
         <activity android:name=".Admin.AdminLoginActivity" />
     </application>

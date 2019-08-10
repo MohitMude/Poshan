@@ -36,9 +36,10 @@ public class LSDetailsAdapter extends RecyclerView.Adapter<LSDetailsAdapter.View
     public void onBindViewHolder(@NonNull LSDetailsAdapter.ViewHolder viewHolder, int i) {
         LSDetailsModel lsDetailsModel=LSDetailList.get(i);
         viewHolder.aName.setText(lsDetailsModel.getName());
-        viewHolder.aAddress.setText(lsDetailsModel.getAddress());
+        viewHolder.aEmail.setText(lsDetailsModel.getEmail());
         viewHolder.aMobile.setText(lsDetailsModel.getMobile());
-        viewHolder.aMTC.setText(lsDetailsModel.getMTC());
+        viewHolder.acenter.setText(lsDetailsModel.getCenter());
+        viewHolder.apassword.setText(lsDetailsModel.getPassword());
 
     }
 
@@ -49,15 +50,16 @@ public class LSDetailsAdapter extends RecyclerView.Adapter<LSDetailsAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView aName,aAddress,aMobile,aMTC;
+        private TextView aName,aEmail,aMobile,acenter,apassword;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             aName=itemView.findViewById(R.id.txt_view_admin_ls_name);
-            aAddress=itemView.findViewById(R.id.txt_view_admin_ls_address);
+            aEmail=itemView.findViewById(R.id.txt_view_admin_ls_email);
             aMobile=itemView.findViewById(R.id.txt_view_admin_ls_mobile_no);
-            aMTC=itemView.findViewById(R.id.txt_view_admin_ls_mtc_center);
+            acenter=itemView.findViewById(R.id.txt_view_admin_ls_mtc_center);
+            apassword=itemView.findViewById(R.id.txt_view_admin_ls_password);
         }
     }
 }

@@ -4,7 +4,9 @@ import android.location.Address;
 import android.location.Location;
 
 public class ItemModel {
-     String ChildName,FatherName,PhoneNo,DaysLeft,Mothername,Age,Weight,Height,District,GramPanchayat,Block,Gender,Summary,NumberOftimeParentsVisited,Location,Address;
+     String ChildName,FatherName,PhoneNo,DaysLeft,Mothername,Age,Weight,Height,District;
+     String GramPanchayat,Block,Gender,Summary,NumberOftimeParentsVisited,Location,Address,Date,nextDate;
+     String AdharNo;
      int isApproved,isBPL,isParentssupporting;
     public ItemModel(String childName, String fatherName, String phoneNo, String daysLeft) {
         ChildName = childName;
@@ -33,9 +35,10 @@ public class ItemModel {
         NumberOftimeParentsVisited = numberOftimeParentsVisited;
         Location = location;
         this.isApproved = isApproved;
+
     }
 
-    public ItemModel(String childName, String fatherName, String mothername,String gender,String phoneNo, String age, String weight, String height, String address,String block,String district, String gramPanchayat,   String summary, String numberOftimeParentsVisited, int isBPL, int isParentssupporting) {
+    public ItemModel(String childName, String fatherName, String mothername,String gender,String phoneNo, String age, String weight, String height, String address,String block,String district, String gramPanchayat,String adhar, int isBPL, String date,String nextdate) {
         ChildName = childName;
         FatherName = fatherName;
         PhoneNo = phoneNo;
@@ -47,11 +50,20 @@ public class ItemModel {
         GramPanchayat = gramPanchayat;
         Block = block;
         Gender = gender;
-        Summary = summary;
-        NumberOftimeParentsVisited = numberOftimeParentsVisited;
         Address = address;
+        AdharNo=adhar;
         this.isBPL = isBPL;
-        this.isParentssupporting = isParentssupporting;
+        Date=date;
+        nextDate=nextdate;
+
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public String getNextDate() {
+        return nextDate;
     }
 
     public String getAddress() {
@@ -204,5 +216,21 @@ public class ItemModel {
 
     public void setIsApproved(int isApproved) {
         this.isApproved = isApproved;
+    }
+
+    public void setDate(String date) {
+        Date = date;
+    }
+
+    public void setNextDate(String nextDate) {
+        this.nextDate = nextDate;
+    }
+
+    public String getAdharNo() {
+        return AdharNo;
+    }
+
+    public void setAdharNo(String adharNo) {
+        AdharNo = adharNo;
     }
 }

@@ -10,10 +10,18 @@
 
     >
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -54,9 +62,11 @@
                 android:id="@+id/btn_ls_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_log_in"/>
+                android:text="@string/action_log_in"
+                android:background="@drawable/ic_rounded_background"/>
 
             <RelativeLayout
+                android:padding="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
               >

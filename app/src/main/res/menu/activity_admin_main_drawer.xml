@@ -6,32 +6,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_mtc_center_analysis"
-            android:icon="@drawable/ic_menu_camera"
             android:title="@string/mtc_center_analysis" />
         <item
             android:id="@+id/nav_ls_details"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/ls_details" />
         <item
             android:id="@+id/nav_mtc_centers"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/mtc_centers" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_add_mtc_center"
+            android:title="Add MTC center"
+            />
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
+                android:id="@+id/nav_admin_profile"
+                android:title="Profile" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:id="@+id/nav_admin_logout"
+                android:title="Logout" />
         </menu>
     </item>
 

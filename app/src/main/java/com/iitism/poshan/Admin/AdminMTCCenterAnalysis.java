@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,7 +51,7 @@ public class AdminMTCCenterAnalysis extends AppCompatActivity {
 
      /* for(int i=0;i<10;i++)
         {
-            AnalysisItemModel analysisItemModel=new AnalysisItemModel(10,5,3,2,7,"CHAS");
+            AnalysisItemModel analysisItemModel=new AnalysisItemModel(10,5,3,7,"CHAS");
             listitem.add(analysisItemModel);
         }
         adapter = new AnalysisAdapter(getApplicationContext(), listitem);
@@ -60,15 +61,21 @@ public class AdminMTCCenterAnalysis extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 listitem.clear();
+               // listitem.add(new AnalysisItemModel("TOTAL BEDS","VACANT BEDS","ABOUT TO DISCHARGE","AVERAGE BED OCCUPANCY","CENTER NAME"));
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    for (DataSnapshot ds1 : ds.getChildren()) {
-                        String CenterName = ds1.child("ChildName").getValue().toString();
-                        int TotalBeds = Integer.parseInt(ds1.child("FatherName").getValue().toString());
-                        int VacantBeds = Integer.parseInt(ds1.child("DaysLeft").getValue().toString());
-                        int AboutToDischarge = Integer.parseInt(ds1.child("PhoneNo").getValue().toString());
-                        int AverageBedOccupancy = Integer.parseInt(ds1.child("Average Bed Occupancy").getValue().toString());
-                        int Sno=analysisAdapter.getItemCount();
-                        AnalysisItemModel analysisItemModel = new AnalysisItemModel(TotalBeds,VacantBeds,AboutToDischarge,Sno,AverageBedOccupancy,CenterName);
+                   {
+                        String CenterName = ds.getKey();
+                       // Toast.makeText(getApplicationContext(),CenterName,Toast.LENGTH_LONG).show();
+                        String t= (ds.child("Total Bed").getValue(String.class));
+                        String v= (ds.child("Vacant Beds").getValue(String.class));
+                         String ab= (ds.child("about to discharge").getValue(String.class));
+                       String av = (ds.child("average bed occupancy").getValue(String.class));
+
+                       int TotalBeds=Integer.parseInt(t);
+                       int VacantBeds=Integer.parseInt(v);
+                       int AboutToDischarge=Integer.parseInt(ab);
+                       int AverageBedOccupancy=Integer.parseInt(av);
+                       AnalysisItemModel analysisItemModel = new AnalysisItemModel(TotalBeds,VacantBeds,AboutToDischarge,AverageBedOccupancy,CenterName);
                         listitem.add(analysisItemModel);
 
                     }

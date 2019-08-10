@@ -54,4 +54,10 @@
     <string name="mtc_centers">MTC Centers</string>
     <string name="title_activity_mtcmain">MTCMainActivity</string>
     <string name="waiting_list">Waiting List</string>
+    <string name="update_daily_details">Update Daily Details</string>
+    <string name="enter_adhaar_no">Enter Adhaar No.</string>
+    <string name="name">Name :</string>
+    <string name="enter_aadhar_no">Enter Aadhar No.</string>
+    <string name="add_ls">Add LS</string>
+    <string name="add_mtc">Add MTC</string>
 </resources>

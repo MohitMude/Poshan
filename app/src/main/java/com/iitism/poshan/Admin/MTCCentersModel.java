@@ -3,9 +3,18 @@ package com.iitism.poshan.Admin;
 public class MTCCentersModel {
 
     String MTCName,Incharge,Address,Email,Password, mobile;
-    long beds;
+    int beds;
 
-    public MTCCentersModel(String MTCName, String incharge, String address, String email, String password, String mobile, long beds) {
+    public MTCCentersModel(String MTCName, String incharge, String address, String email, String password, String mobile) {
+        this.MTCName = MTCName;
+        Incharge = incharge;
+        Address = address;
+        Email = email;
+        Password = password;
+        this.mobile = mobile;
+    }
+
+    public MTCCentersModel(String MTCName, String incharge, String address, String email, String password, String mobile, int beds) {
         this.MTCName = MTCName;
         Incharge = incharge;
         Address = address;
@@ -39,7 +48,7 @@ public class MTCCentersModel {
         return mobile;
     }
 
-    public long getBeds() {
+    public int getBeds() {
         return beds;
     }
 }

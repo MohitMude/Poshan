@@ -1,17 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LS.LSMainActivity"
-    tools:showIn="@layout/app_bar_ls_main">
+    tools:showIn="@layout/app_bar_ls_main"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_ls_main"
-        android:padding="8dp"
+    <Spinner
+        android:id="@+id/center_spinner"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:elevation="5dp"></Spinner>
+
+    <TextView
+        android:id="@+id/txt_view_vacant_beds_ls_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25sp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:paddingTop="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_main_under_treatment"
+            android:text="Under Treatment"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_rounded_background"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+        <Button
+            android:id="@+id/btn_main_edit_child"
+            android:text="Edit Child Details"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toRightOf="@+id/btn_main_under_treatment"
+            android:background="@drawable/ic_rounded_background"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+        <Button
+            android:id="@+id/btn_main_waiting_list"
+            android:text="Waiting List"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/btn_main_under_treatment"
+            android:layout_toLeftOf="@+id/btn_main_edit_child"
+            android:background="@drawable/ic_rounded_background"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+        <Button
+            android:id="@+id/btn_main_profile"
+            android:text="Profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/btn_main_edit_child"
+            android:layout_toRightOf="@+id/btn_main_waiting_list"
+            android:background="@drawable/ic_rounded_background"
+            android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+
+    </RelativeLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recycler_view_ls_main"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>-->
+
+</LinearLayout>

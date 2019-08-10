@@ -40,7 +40,7 @@ public class MTCCentersAdapter extends RecyclerView.Adapter<MTCCentersAdapter.Vi
            viewHolder.xemail.setText(mtcCentersModel.getEmail());
            viewHolder.xpassword.setText(mtcCentersModel.getPassword());
            viewHolder.xmobile.setText(mtcCentersModel.getMobile());
-           viewHolder.xbeds.setText(String.valueOf(mtcCentersModel.getBeds()));
+          // viewHolder.xbeds.setText(String.valueOf(mtcCentersModel.getBeds()));
 
     }
 
@@ -51,7 +51,8 @@ public class MTCCentersAdapter extends RecyclerView.Adapter<MTCCentersAdapter.Vi
 
     public  class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView xname,xincharge,xaddress,xemail,xpassword,xmobile,xbeds;
+        TextView xname,xincharge,xaddress,xemail,xpassword,xmobile;
+      // TextView xbeds;
 
 
 
@@ -64,7 +65,7 @@ public class MTCCentersAdapter extends RecyclerView.Adapter<MTCCentersAdapter.Vi
             xemail=itemView.findViewById(R.id.mtc_center_email_txt_view);
             xpassword=itemView.findViewById(R.id.mtc_center_password_txt_view);
             xmobile=itemView.findViewById(R.id.mtc_center_mobile_txt_view);
-            xbeds=itemView.findViewById(R.id.mtc_center_beds_txt_view);
+            //xbeds=itemView.findViewById(R.id.mtc_center_beds_txt_view);
 
         }
     }

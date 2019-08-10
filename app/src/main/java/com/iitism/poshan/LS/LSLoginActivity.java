@@ -1,6 +1,8 @@
 package com.iitism.poshan.LS;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +27,7 @@ public class LSLoginActivity extends AppCompatActivity implements View.OnClickLi
     TextView LogInAsAdmin,LogInAsMTC;
     EditText LSEmail,LSPassword;
     String enteredemail,enteredpassword;
-    String email,password;
+    String email,password,center;
     int flag=0;
     Button LsLogin;
 
@@ -74,8 +76,29 @@ public class LSLoginActivity extends AppCompatActivity implements View.OnClickLi
 
                             if(password.equals(enteredpassword))
                             {   flag=1;
-                               
+
+                                   center=ds.child("pacenter").getValue(String.class);
+
+
+                                SharedPreferences sharedPreferences = getSharedPreferences("Values",Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("Center",center);
+                                editor.putString("Email",ds.child("Email").getValue(String.class));
+                                editor.putString("Phone",ds.child("Phone").getValue(String.class));
+                                editor.putString("Name",ds.child("Name").getValue(String.class));
+                                editor.apply();
+
+                                SharedPreferences sharedPreferences1=getSharedPreferences("Login",Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor1=sharedPreferences1.edit();
+                                editor1.putString("LS Login","true");
+                                editor1.apply();
+
+
+
+
+
                                 Intent i=new Intent(getApplicationContext(),LSMainActivity.class);
+                                finish();
                                 startActivity(i);
                             }
 
@@ -101,11 +124,13 @@ public class LSLoginActivity extends AppCompatActivity implements View.OnClickLi
         else if(v == LogInAsAdmin)
         {
             Intent i=new Intent(getApplicationContext(), AdminLoginActivity.class);
+            finish();
             startActivity(i);
         }
         else if(v== LogInAsMTC)
         {
            Intent j=new Intent(getApplicationContext(), MTCLoginActivity.class);
+            finish();
            startActivity(j);
         }
 

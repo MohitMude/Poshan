@@ -22,14 +22,23 @@
 
     <include layout="@layout/content_ls_main" />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/Widget.AppCompat.ProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:padding="10dp"
-        android:indeterminate="true"/>
+    <!--<ImageButton-->
+        <!--android:id="@+id/imageButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_gravity="bottom"-->
+    <!---->
+        <!--android:contentDescription="Add Child "-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:srcCompat="@drawable/ic_add" />-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progress_bar"-->
+        <!--style="@style/Widget.AppCompat.ProgressBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:padding="10dp"-->
+        <!--android:indeterminate="true"/>-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -37,6 +46,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_add" />
+        app:srcCompat="@drawable/ic_add"
+        />
+    <!---->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" -->
+        <!--android:drawableRight="@drawable/ic_add_circle"-->
+        <!--android:background="@drawable/ic_rounded_background"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:text="Add Child"/>-->
 
 </android.support.design.widget.CoordinatorLayout>
